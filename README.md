@@ -1,70 +1,123 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GoDaddy Repositories React App
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)
+![GitHub API](https://img.shields.io/badge/GitHub_API-181717?style=for-the-badge&logo=github&logoColor=white)
 
-In the project directory, you can run:
+A React-based web application that fetches and displays GoDaddy's public GitHub repositories. Users can explore repository details such as description, language, forks, open issues, and watchers. Built with modern tools and best practices, this project demonstrates my ability to create clean, maintainable, and testable code.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Repository List**: Fetches and displays a list of GoDaddy's public repositories from the GitHub API.
+- **Repository Details**: Clicking on a repository shows detailed information, including:
+  - Title
+  - Description
+  - Link to the repository
+  - Language(s) used
+  - Number of forks, open issues, and watchers
+- **End-to-End Testing**: Comprehensive test coverage using Playwright.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**:
+  - React: For building the user interface.
+  - React Router DOM: For navigation between pages.
+  - Axios: For making HTTP requests to the GitHub API.
+  - CSS: For styling the application.
+- **Testing**:
+  - Playwright: For end-to-end testing.
+- **Tools**:
+  - GitHub API: For fetching repository data.
+  - npm: For dependency management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these steps to set up and run the project locally.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js (v16 or higher)
+- npm (v8 or higher)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   \`\`\`bash
+   git clone https://github.com/your-username/godaddy-repos.git
+   cd godaddy-repos
+   \`\`\`
 
-## Learn More
+2. **Install dependencies**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Start the development server**:
 
-### Code Splitting
+   \`\`\`bash
+   npm start
+   \`\`\`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Run tests**:
 
-### Analyzing the Bundle Size
+   \`\`\`bash
+   npx playwright test
+   \`\`\`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. **View the app**:
 
-### Making a Progressive Web App
+   Open your browser and navigate to \`http://localhost:3000\`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+\`\`\`
+godaddy-repos/
+├── public/                  # Static assets
+├── src/
+│   ├── component/          # React components
+│   │   ├── ReposList.js     # Component to display the list of repositories
+│   │   └── RepoDetail.js    # Component to display repository details
+│   ├── App.js               # Main app component with routing
+│   ├── index.js             # Entry point for the app
+│   ├── App.css              # Basic CSS styles
+│   └── index.css            # Global styles
+├── tests/                   # Playwright end-to-end tests
+│   ├── reposList.spec.js    # Tests for the repository list page
+│   └── repoDetail.spec.js   # Tests for the repository details page
+├── package.json             # Project dependencies and scripts
+├── README.md                # This file
+└── .gitignore               # Files and directories to ignore in Git
+\`\`\`
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Challenges and Solutions
 
-### `npm run build` fails to minify
+1. **Challenge**: Fetching and displaying data from the GitHub API.
+   - **Solution**: Used Axios for efficient API calls and implemented error handling for network issues.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. **Challenge**: Writing reliable end-to-end tests.
+   - **Solution**: Used Playwright to simulate user interactions and validate UI behavior.
+
+---
+
+## About Me
+
+Hi! I'm Monika Gusain, a passionate Frontend Developer with experience in building modern web applications. I enjoy solving complex problems and creating user-friendly interfaces.
+
+- **LinkedIn**: https://www.linkedin.com/in/monika-gusain-136608187/
+- **GitHub**: https://github.com/MonikaGusain
+- **Email**: monagusain74@gmail.com
+
+---
