@@ -21,6 +21,6 @@ test.describe('Repository List Page', () => {
 
 test.describe('Repository Details Page', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/repo/4967118'); // Navigate directly to a repository details page
+    await page.goto('/repo/4967118'); 
   });
 });

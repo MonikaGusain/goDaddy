@@ -67,13 +67,19 @@ Follow these steps to set up and run the project locally.
    npm start
    \`\`\`
 
-4. **Run tests**:
+4. ⁠**Install Playwright**:
+
+   \`\`\`bash
+   npx playwright install
+   \`\`\` 
+
+5. **Run tests**:
 
    \`\`\`bash
    npx playwright test
    \`\`\`
 
-5. **View the app**:
+6. **View the app**:
 
    Open your browser and navigate to \`http://localhost:3000\`.
 
